@@ -46,6 +46,16 @@ PreciseBake supports conversions for various units:
 | **Cloves (garlic, etc.)** | Fixed weight assumptions       |
 | **Handful, Pinch, Dash** | Approximate fixed weights       |
 
+```mermaid
+graph TD;
+    A[User Input: Text/Speech] -->|Parse with Gemini| B[Gemini Pro: Ingredient & Unit Extraction];
+    B -->|Retrieve Density| C[Ingredient Density Database];
+    C -->|Found in DB? Yes| D[Conversion Algorithm];
+    C -- No --> F[Fallback: Estimate via Gemini API];
+    D --> G[Display Converted Grams];
+    F --> G;
+```
+
 
 📋 Limitations & Future Improvements
 
