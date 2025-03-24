@@ -57,15 +57,13 @@ graph TD;
 ```
 
 
-📋 Limitations & Future Improvements
-
 ⚠️ Current Limitations
 
-❌ Not all ingredients are available in the database; Gemini API fallback reliance is required for missing entries.
+Not all ingredients are available in the database; Gemini API fallback reliance is required for missing entries.
 
-❌ Some units (like "a handful") require approximation rather than exact conversion.
+Some units (like "a handful") require approximation rather than exact conversion.
 
-❌ Image-based volume estimation is still under development.
+Image-based volume estimation is still under development.
 
 🙌 Credits & Acknowledgments
 
