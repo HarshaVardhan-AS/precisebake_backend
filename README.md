@@ -2,11 +2,11 @@
 
 PreciseBake - AI-Powered Recipe Measurement Converter
 
-Welcome to PreciseBake, an AI-enhanced tool that ensures baking precision by converting recipe measurements from volume-based to weight-based units, improving consistency and accuracy in baking.
+Welcome to PreciseBake—an AI-powered tool that enhances baking precision by converting volume-based recipe measurements into weight-based units, improving consistency and accuracy in baking.
 
 🌟 Quick Introduction
 
-Many online recipes list ingredients using imprecise volume measurements like cups or spoons, which can lead to inconsistent results. PreciseBake solves this by converting these measurements into grams using a database of ingredient densities, real-time conversions, and AI-powered estimations for missing values.
+Many online recipes list ingredients using imprecise volume measurements like cups or spoons, which can lead to inconsistent results. PreciseBake solves this by converting these measurements into grams using an ingredient density database, real-time conversions, and AI-driven estimations for missing values.
 
 ✨ Features
 
