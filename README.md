@@ -69,13 +69,13 @@ graph TD;
 
 🙌 Credits & Acknowledgments
 
-Developed by [BitCrusaders] as part of the GDG On Campus Solution Challenge.
+Developed by **BitCrusaders** as part of the GDG On Campus Solution Challenge.
 
 Special thanks to:
 
-[Harsha A S] – Backend development, database management.
+**Harsha A S** – Backend development, database management.
 
-[Vahin Raj] – Frontend UI/UX, React + Tailwind integration.
+**Vahin Raj** – Frontend UI/UX, React + Tailwind integration.
 
 Google Developer Tools – For providing the AI-powered API that enhances the solution.
 
