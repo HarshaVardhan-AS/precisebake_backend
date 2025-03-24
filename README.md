@@ -48,7 +48,9 @@ PreciseBake supports conversions for various units:
 
 
 📋 Limitations & Future Improvements
+
 ⚠️ Current Limitations
+
 ❌ Not all ingredients are available in the database; Gemini API fallback reliance is required for missing entries.
 
 ❌ Some units (like "a handful") require approximation rather than exact conversion.
@@ -56,7 +58,9 @@ PreciseBake supports conversions for various units:
 ❌ Image-based volume estimation is still under development.
 
 🙌 Credits & Acknowledgments
+
 Developed by [BitCrusaders] as part of the GDG On Campus Solution Challenge.
+
 Special thanks to:
 
 [Harsha A S] – Backend development, database management.
