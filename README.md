@@ -52,7 +52,7 @@ graph TD;
     C -- Yes --> D[Conversion Algorithm];
     C -- No --> E[Fallback: Estimate via Gemini API];
     D --> G[Display Converted Grams];
-    F --> G;
+    E --> G;
 ```
 
 
