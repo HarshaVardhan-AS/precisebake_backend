@@ -19,7 +19,7 @@ CORS(app)
 
 limiter = Limiter(get_remote_address, app=app, default_limits=["10 per minute"],storage_uri="memory://")
 
-# Initialize the genai client
+
 client = genai.Client(api_key=API_KEY)
 app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("DATABASE_URL") # Fetch Database URL from the environment variable
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -58,7 +58,7 @@ def convert():
         return jsonify({"error": "No recipe text provided"}), 400
 
     try:
-        # Step 1: Extract structured ingredients from Gemini
+        
         response = client.models.generate_content(
             model="gemini-2.0-flash",
             contents=f"Extract structured ingredient data (name, unit, amount) from: {recipe_text}. "
@@ -70,7 +70,7 @@ def convert():
 
         response_text = response.text.strip()
 
-        # Extract JSON content safely if enclosed within triple backticks
+        
         if response_text.startswith("```") and response_text.endswith("```"):
             response_text = response_text.split("\n", 1)[-1].rsplit("\n", 1)[0].strip()
 
@@ -135,7 +135,7 @@ def convert():
                   Ingredient.tsp_g
               ).first()
 
-              # If exact match fails, try a partial match
+        
               if not ingredient_data:
                   ingredient_data = Ingredient.query.filter(
                       Ingredient.ingredient_name.ilike(f"%{ingredient_name}%")
