@@ -1,14 +1,14 @@
 
 
-PreciseBake - AI-Powered Recipe Measurement Converter
+**PreciseBake - AI-Powered Recipe Measurement Converter**
 
 Welcome to PreciseBake—an AI-powered tool that enhances baking precision by converting volume-based recipe measurements into weight-based units, improving consistency and accuracy in baking.
 
-🌟 Quick Introduction
+🌟 **Quick Introduction**
 
 Many online recipes list ingredients using imprecise volume measurements like cups or spoons, which can lead to inconsistent results. PreciseBake solves this by converting these measurements into grams using an ingredient density database, real-time conversions, and AI-driven estimations for missing values.
 
-✨ Features
+✨ **Features**
 
 ✅ AI-Powered Measurement Conversion – Converts cups, spoons, ounces, and other units into grams accurately.
 
@@ -20,7 +20,7 @@ Many online recipes list ingredients using imprecise volume measurements like cu
 
 ✅ Manual Text Input – Type out recipe ingredients and receive precise conversions.
 
-🛠️ Tech Stack & Tools Used
+🛠️ **Tech Stack & Tools Used**
 | Component            | Technology              |
 |----------------------|------------------------|
 | **Backend**         | Flask (Python)          |
@@ -29,7 +29,7 @@ Many online recipes list ingredients using imprecise volume measurements like cu
 | **Frontend Framework** | React.js, Tailwind CSS |
 | **Speech Recognition** | Web Speech API (JavaScript) |
 
-🔢 Measurement Handling
+🔢 **Measurement Handling**
 PreciseBake supports conversions for various units:
 
 | Unit                  | Conversion Method                     |
@@ -57,7 +57,7 @@ graph TD;
 ```
 
 
-⚠️ Current Limitations
+⚠️ **Current Limitations**
 
 Not all ingredients are available in the database; Gemini API fallback reliance is required for missing entries.
 
@@ -65,7 +65,7 @@ Some units (like "a handful") require approximation rather than exact conversion
 
 Image-based volume estimation is still under development.
 
-🙌 Credits & Acknowledgments
+🙌 **Credits & Acknowledgments**
 
 Developed by **BitCrusaders** as part of the GDG On Campus Solution Challenge.
 
