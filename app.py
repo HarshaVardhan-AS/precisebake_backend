@@ -62,8 +62,8 @@ def convert():
         response = client.models.generate_content(
             model="gemini-2.0-flash",
             contents=f"Extract structured ingredient data (name, unit, amount) from: {recipe_text}. "
-                     "Ensure the ingredients are food items or items used in cooking and baking, and NOT people, places, or unknown words."
-                     "Ignore any such unknown words found entirely."
+                     "Ensure **each and every one** of the ingredients are food items or items used in cooking and baking, and **NOT** people, places, or unknown words."
+                     "Completely **ignore** non-food items, people, places, or unknown words. "
                      "If **none** of the words in the input are valid food ingredients, return exactly this string: 'Invalid user input' (without quotes)."
                      "Otherwise, return only a JSON list, without explanations or extra text. Example output: "
                      '[{"ingredient": "flour", "unit": "cups", "amount": 2}, '
