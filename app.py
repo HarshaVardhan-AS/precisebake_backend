@@ -64,13 +64,17 @@ def convert():
             contents=f"Extract structured ingredient data (name, unit, amount) from: {recipe_text}. "
                      "Ensure the ingredients are food items or items used in cooking and baking, and NOT people, places, or unknown words."
                      "Ignore any such unknown words found entirely."
-                     "Return only a JSON list, without explanations or extra text. Example output: "
+                     "If **none** of the words in the input are valid food ingredients, return exactly this string: 'Invalid user input' (without quotes)."
+                     "Otherwise, return only a JSON list, without explanations or extra text. Example output: "
                      '[{"ingredient": "flour", "unit": "cups", "amount": 2}, '
                      '{"ingredient": "sugar", "unit": "tbsp", "amount": 3}].'
         )
 
 
         response_text = response.text.strip()
+
+        if response_text == "Invalid user input":
+            return jsonify({"error": "Invalid user input. No valid ingredients found."}), 400
 
         
         if response_text.startswith("```") and response_text.endswith("```"):
