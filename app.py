@@ -154,11 +154,11 @@ def convert():
 
                 if unit in ["cup", "cups"]:
                     conversion_factor = ingredient_data.cup_g
-                elif unit in ["spoon", "spoons", "tbsp", "tablespoon", "spoonful", "spoonfuls"]:
+                elif unit in ["spoon", "spoons", "tbsp", "tablespoon", "spoonful", "spoonfuls", "tablespoons"]:
                     conversion_factor = ingredient_data.tbsp_g
-                elif unit in ["tsp", "teaspoon"]:
+                elif unit in ["tsp", "teaspoon", "teaspoons"]:
                     conversion_factor = ingredient_data.tsp_g
-                elif unit in ["g", "grams"]:
+                elif unit in ["g", "grams", "gram"]:
                     conversion_factor = 1
                 elif unit in ["fl oz", "fluid ounce", "fluid ounces"]:
                     conversion_factor = 29.5735 * ingredient_data.density_g_
