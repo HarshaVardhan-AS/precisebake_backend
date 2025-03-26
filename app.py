@@ -62,6 +62,8 @@ def convert():
         response = client.models.generate_content(
             model="gemini-2.0-flash",
             contents=f"Extract structured ingredient data (name, unit, amount) from: {recipe_text}. "
+                     "Ensure the ingredients are food items or items used in cooking and baking, and NOT people, places, or unknown words."
+                     "Ignore any such unknown words found entirely."
                      "Return only a JSON list, without explanations or extra text. Example output: "
                      '[{"ingredient": "flour", "unit": "cups", "amount": 2}, '
                      '{"ingredient": "sugar", "unit": "tbsp", "amount": 3}].'
@@ -197,8 +199,10 @@ def convert():
                 gemini_response = client.models.generate_content(
                     model="gemini-2.0-flash",
                     contents=f"Estimate the weight in grams for {amount} {unit} of {ingredient_name}. "
+                             "Completely ignore any words that are names, places, or unknown terms, and do NOT attempt to estimate them."
                              "If the ingredient is a whole fruit or vegetable, assume average size. "
                              "Return only the estimated value as a number, no extra text."
+                             "If unsure about an ingredient, or if the ingredient is unknown or unrecognized, dont estimate or return anything for that ingredient."
 
                 )
                 try:
